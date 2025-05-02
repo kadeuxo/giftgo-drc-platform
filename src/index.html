@@ -10,75 +10,85 @@
   <script>
     tailwind.config = {
       theme: {
-        extend: {
-          colors: { brand: '#e72929', dark: '#111827' }
-        }
+        extend: { colors: { brand: '#e72929', dark: '#111827' } }
       }
     };
   </script>
+
+  <!-- ❶  Flutterwave public key + SDK + payCDF helper -->
+  <script>window.FLW_KEY = 'FLWPUBK_TEST_xxxxxxxxx';</script>
+  <script src="https://checkout.flutterwave.com/v3.js"></script>
+  <script type="module" src="/js/flutterwave.js"></script>
 </head>
 
 <body class="bg-dark text-white min-h-screen flex flex-col">
+
   <!-- HERO -->
   <header class="py-8 text-center">
     <h1 class="text-3xl font-extrabold tracking-tight">
-      <span class="text-brand">GiftGo</span> DRC
+      <span class="text-brand">GiftGo</span>&nbsp;DRC
     </h1>
     <p class="mt-2 text-lg text-gray-300">
-      Global entertainment & gaming – pay with Airtel Money & M‑Pesa.
+      Global entertainment &amp; gaming – pay with Airtel Money &amp; M‑Pesa.
     </p>
   </header>
 
   <!-- PRODUCT GRID -->
   <main class="flex-1 max-w-4xl mx-auto px-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
     <!-- Netflix -->
     <div class="border border-gray-700 rounded-xl p-4 bg-gray-900">
       <h3 class="text-xl font-semibold mb-1">Netflix $10</h3>
       <p class="text-sm text-gray-400 mb-4">25 000 CDF · Instant code</p>
-      <a href="https://wa.me/48729618390?text=NET10"
-         class="block w-full text-center bg-brand py-2 rounded-md font-medium hover:opacity-90">
-        Acheter sur WhatsApp
-      </a>
+      <button
+        onclick="import('/js/flutterwave.js').then(m => m.payCDF(25000,'NET10'))"
+        class="block w-full text-center bg-brand py-2 rounded-md font-medium hover:opacity-90">
+        Payer & recevoir
+      </button>
     </div>
 
     <!-- PlayStation -->
     <div class="border border-gray-700 rounded-xl p-4 bg-gray-900">
       <h3 class="text-xl font-semibold mb-1">PlayStation $20</h3>
       <p class="text-sm text-gray-400 mb-4">50 000 CDF · Instant code</p>
-      <a href="https://wa.me/48729618390?text=PS20"
-         class="block w-full text-center bg-brand py-2 rounded-md font-medium hover:opacity-90">
-        Acheter sur WhatsApp
-      </a>
+      <button
+        onclick="import('/js/flutterwave.js').then(m => m.payCDF(50000,'PS20'))"
+        class="block w-full text-center bg-brand py-2 rounded-md font-medium hover:opacity-90">
+        Payer & recevoir
+      </button>
     </div>
 
     <!-- Google Play -->
     <div class="border border-gray-700 rounded-xl p-4 bg-gray-900">
       <h3 class="text-xl font-semibold mb-1">Google Play $10</h3>
       <p class="text-sm text-gray-400 mb-4">25 500 CDF · Instant code</p>
-      <a href="https://wa.me/48729618390?text=GPLAY10"
-         class="block w-full text-center bg-brand py-2 rounded-md font-medium hover:opacity-90">
-        Acheter sur WhatsApp
-      </a>
+      <button
+        onclick="import('/js/flutterwave.js').then(m => m.payCDF(25500,'GPLAY10'))"
+        class="block w-full text-center bg-brand py-2 rounded-md font-medium hover:opacity-90">
+        Payer & recevoir
+      </button>
     </div>
 
     <!-- Spotify -->
     <div class="border border-gray-700 rounded-xl p-4 bg-gray-900">
       <h3 class="text-xl font-semibold mb-1">Spotify $10</h3>
       <p class="text-sm text-gray-400 mb-4">24 000 CDF · Instant code</p>
-      <a href="https://wa.me/48729618390?text=SPOT10"
-         class="block w-full text-center bg-brand py-2 rounded-md font-medium hover:opacity-90">
-        Acheter sur WhatsApp
-      </a>
+      <button
+        onclick="import('/js/flutterwave.js').then(m => m.payCDF(24000,'SPOT10'))"
+        class="block w-full text-center bg-brand py-2 rounded-md font-medium hover:opacity-90">
+        Payer & recevoir
+      </button>
     </div>
 
     <!-- Steam -->
     <div class="border border-gray-700 rounded-xl p-4 bg-gray-900">
       <h3 class="text-xl font-semibold mb-1">Steam $10</h3>
       <p class="text-sm text-gray-400 mb-4">25 000 CDF · Instant code</p>
-      <a href="https://wa.me/48729618390?text=STEAM10"
-         class="block w-full text-center bg-brand py-2 rounded-md font-medium hover:opacity-90">
-        Acheter sur WhatsApp
-      </a>
+      <button
+        onclick="import('/js/flutterwave.js').then(m => m.payCDF(25000,'STEAM10'))"
+        class="block w-full text-center bg-brand py-2 rounded-md font-medium hover:opacity-90">
+        Payer & recevoir
+      </button>
     </div>
   </main>
 
@@ -88,4 +98,5 @@
   </footer>
 </body>
 </html>
+
 
