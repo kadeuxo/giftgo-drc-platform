@@ -1,0 +1,9 @@
+[build]
+  publish = "src"
+  functions = "functions"
+
+# Single‐page app fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
