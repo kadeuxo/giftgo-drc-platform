@@ -1,0 +1,35 @@
+[
+  {
+    "name": "App Store & iTunes",
+    "brand": "Apple",
+    "country": "DRC",
+    "currency": "USD",
+    "price": 25.0,
+    "price_cdf": 62500.0,
+    "description": "Recharge your Apple ID to purchase apps, games and music.",
+    "image_url": "https://example.com/images/apple-card.png",
+    "inventory": 50
+  },
+  {
+    "name": "PlayStation Store",
+    "brand": "Sony",
+    "country": "DRC",
+    "currency": "USD",
+    "price": 50.0,
+    "price_cdf": 125000.0,
+    "description": "Offrez des jeux et contenus PlayStation à vos proches.",
+    "image_url": "https://example.com/images/playstation-card.png",
+    "inventory": 30
+  },
+  {
+    "name": "Netflix Subscription",
+    "brand": "Netflix",
+    "country": "DRC",
+    "currency": "USD",
+    "price": 15.0,
+    "price_cdf": 37500.0,
+    "description": "Un mois d'abonnement Netflix premium.",
+    "image_url": "https://example.com/images/netflix-card.png",
+    "inventory": 100
+  }
+]
